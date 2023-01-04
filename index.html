@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="format-detection" content="telephone=no">
+        <link rel="shortcut icon" href="img/blacksquare.png">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="styles.css">
+        <title>Cookery School</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="script.js"></script>
+        <script src="https://kit.fontawesome.com/257a877408.js" crossorigin="anonymous"></script>
+    </head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header__body">
+                <a href="#main" class="header__logo">
+                    <img src="img/logo.webp" alt="">
+                </a>
+                <div class="header__burger">
+                    <span></span>
+                </div>
+                <nav class="header__menu">
+                    <ul class="header__list">
+                        <li>
+                            <a href="#courses" class="header__link">Courses</a>
+                        </li>
+                        <li>
+                            <a href="#chefs" class="header__link">Chefs</a>
+                        </li>
+                        <li>
+                            <a href="#testimonials" class="header__link">Testimonials</a>
+                        </li>
+                        <li>
+                            <a href="#contacts" class="header__link">Contacts</a>
+                        </li>
+                    </ul>
+                    <div class="social__header">
+                        <a href="https://www.facebook.com/" class="social" id="fb" target="_blank">
+                            <i class="fa-brands fa-facebook"></i>
+                        </a>
+                        <a href="https://twitter.com/" class="social" id="tw" target="_blank">
+                            <i class="fa-brands fa-twitter"></i>
+                        </a>
+                        <a href="https://www.instagram.com/" class="social" id="inst" target="_blank">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                    </div>
+                </nav>
+                
+            </div>
+        </div>
+    </header>
+    <section id="main">
+        <div class="container">
+            <h1>Cookery School</h1>
+            <p class="main__subtitle">Join professional chefs, including Thomas Bennett, Benjamin Doe and Frank Rose, in a series of online cooking courses.</p>
+            <button id="button__main"><a href="#pricing">Buy Now</a></button>
+        </div>
+    </section>
+    <section id="quote">
+        <div class="container grid">
+            <div class="quote__block">
+                <p class="quote">«A chef is a mixture maybe of artistry and craft. You have to learn the craft really to get there».</p>
+            </div>
+            <p class="quote__subtitle">Even if you're not a great chef, there's nothing to stop you understanding the difference between what tastes good and what doesn't. Even if you're not a great chef, there's nothing to stop you understanding the difference between what tastes good and what doesn't.</p>
+        </div>
+    </section>
+    <section id="pricing">
+        <div class="container">
+            <h2>Pricing</h2>
+            <h3>Find a plan that is right for you</h3>
+            <div class="pricing__body grid">
+                <div class="pricing__item">
+                        <div class="pricing__item__image">
+                            <img src="img/p1.webp" alt="">
+                        </div>
+                        <p class="pricing__item__title">Online</p>
+                        <p class="pricing__item__price">$40</p>
+                        <p class="pricing__item__price__subtitle">per month</p>
+                        <p class="pricing__item__description">Cooking is not difficult. Everyone has taste, even if they don't realize it. Even if you're not a great chef, there's nothing to stop you understanding the difference between what tastes good and what doesn't.</p>
+                        <button class="pricing__button" onclick="openForm()">Buy Now</button>
+                    <div class="form__popup" id="popup1">
+                        <form class="form__container">
+                            <h2>Write Us</h2>
+                            <div>
+                                <label for="name">Name</label>
+                                <input type="text" id="name" name="name">
+                            </div>
+                            <div>
+                                <label for="phone">Phone number *</label>
+                                <input type="tel" id="phone" name="phone" required>
+                            </div>
+                            <div>
+                                <label for="message">Message</label>
+                                <textarea name="message" id="message" width="100%" height="100%"></textarea>
+                            </div>
+                            <div>
+                            <button type="submit" class="btn" onclick="openForm2(), closeForm()">Submit</button>
+                            </div>
+                            <button type="button" class="btn__cancel" onclick="closeForm()">&times;</button>    
+                        </form>
+                    </div>
+                    <div class="form__popup" id="popup2">
+                        <div class="popup__container">
+                            <div class="wrapper__popup__logo">
+                                <div class="popup__logo">
+                                    <i class="fa-solid fa-feather-pointed"></i>
+                                </div>
+                            </div>
+                            <h2>Thank You</h2>
+                            <div class="content">
+                                Our company values each and every customer. If you have any questions or feedback, please don’t hesitate to reach out.
+                            </div>
+                            <div class="wrapper__btn2">
+                                <button type="button" class="btn2" onclick="closeForm2()">Done</button>
+                            </div>
+                            <button type="button" class="btn__cancel" onclick="closeForm2()">&times;</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="pricing__item" id="pricing__black__card">
+                    <div class="pricing__item__image">
+                        <img src="img/p2.webp" alt="">
+                    </div>
+                    <p class="pricing__item__title">Group</p>
+                    <p class="pricing__item__price">$90</p>
+                    <p class="pricing__item__price__subtitle">per month</p>
+                    <p class="pricing__item__description">Cooking is not difficult. Everyone has taste, even if they don't realize it. Even if you're not a great chef, there's nothing to stop you understanding the difference between what tastes good and what doesn't.</p>
+                    <button class="pricing__button" id="pricing__button__white" onclick="openForm()">Buy Now</button>
+                </div>
+                <div class="pricing__item">
+                    <div class="pricing__item__image">
+                        <img src="img/p3.webp" alt="">
+                    </div>
+                    <p class="pricing__item__title">Individual</p>
+                    <p class="pricing__item__price">$150</p>
+                    <p class="pricing__item__price__subtitle">per month</p>
+                    <p class="pricing__item__description">Cooking is not difficult. Everyone has taste, even if they don't realize it. Even if you're not a great chef, there's nothing to stop you understanding the difference between what tastes good and what doesn't.</p>
+                    <button class="pricing__button" onclick="openForm()">Buy Now</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="courses">
+        <div class="container">
+            <h2>Courses</h2>
+            <h3>Courses to get you started</h3>
+            <div class="courses__body grid">
+                <div class="courses__item">
+                    <div class="courses__item__image">
+                        <div class="courses__item__image__img" id="c1"></div>
+                    </div>
+                    <div class="courses__item__text">
+                        <p class="courses__item__title">French Cuisine Course</p>
+                        <p class="courses__item__description">Cooking is not difficult. Everyone has taste, even if they don't realize it. Even if you're not a great chef, there's nothing to stop you understanding the difference between what tastes good and what doesn't.</p>
+                        <div class="courses__item__buy">
+                            <button class="courses__item__buy__button" onclick="openForm()">Buy Now</button>
+                            <p class="courses__item__buy__price">$150</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="courses__item">
+                    <div class="courses__item__image">
+                        <div class="courses__item__image__img" id="c2"></div>
+                    </div>
+                    <div class="courses__item__text">
+                        <p class="courses__item__title">Italian Cuisine Course</p>
+                        <p class="courses__item__description">Cooking is not difficult. Everyone has taste, even if they don't realize it. Even if you're not a great chef, there's nothing to stop you understanding the difference between what tastes good and what doesn't.</p>
+                        <div class="courses__item__buy">
+                            <button class="courses__item__buy__button" onclick="openForm()">Buy Now</button>
+                            <p class="courses__item__buy__price">$150</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="courses__item">
+                    <div class="courses__item__image">
+                        <div class="courses__item__image__img" id="c3"></div>
+                    </div>
+                    <div class="courses__item__text">
+                        <p class="courses__item__title">Dessert Course</p>
+                        <p class="courses__item__description">Cooking is not difficult. Everyone has taste, even if they don't realize it. Even if you're not a great chef, there's nothing to stop you understanding the difference between what tastes good and what doesn't.</p>
+                        <div class="courses__item__buy">
+                            <button class="courses__item__buy__button" onclick="openForm()">Buy Now</button>
+                            <p class="courses__item__buy__price">$120</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="chefs">
+        <div class="container">
+            <h2>Professional Chefs</h2>
+            <h3>Our chefs come from all over the world and have a variety of different backgrounds</h3>
+            <div class="chefs__body grid">
+                <div class="chefs__item">
+                    <div class="chefs__item__image">
+                        <div class="chefs__item__image__img" id="chef1"></div>
+                    </div>
+                    <div class="chefs__item__text">
+                        <p class="chefs__item__title">Thomas Bennett</p>
+                        <p class="chefs__item__subtitle">British star chef</p>
+                        <p class="chefs__item__description">You have to be confident in who you are and what you're doing. Of course, you try to evolve. I would never tell you, 'Today is the best I will ever be. I'm always trying to be a better chef, a better dad, a better person.</p>
+                    </div>
+                </div>
+                <div class="chefs__item">
+                    <div class="chefs__item__image">
+                        <div class="chefs__item__image__img" id="chef2"></div>
+                    </div>
+                    <div class="chefs__item__text">
+                        <p class="chefs__item__title">Benjamin Doe</p>
+                        <p class="chefs__item__subtitle">American chef</p>
+                        <p class="chefs__item__description">You have to be confident in who you are and what you're doing. Of course, you try to evolve. I would never tell you, 'Today is the best I will ever be. I'm always trying to be a better chef, a better dad, a better person.</p>
+                    </div>
+                </div>
+                <div class="chefs__item">
+                    <div class="chefs__item__image">
+                        <div class="chefs__item__image__img" id="chef3"></div>
+                    </div>
+                    <div class="chefs__item__text">
+                        <p class="chefs__item__title">Frank Rose</p>
+                        <p class="chefs__item__subtitle">Italian chef</p>
+                        <p class="chefs__item__description">You have to be confident in who you are and what you're doing. Of course, you try to evolve. I would never tell you, 'Today is the best I will ever be. I'm always trying to be a better chef, a better dad, a better person.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="timer">
+        <div class="container">
+            <div class="timer__body grid">
+                <p class="timer__title">Course Will Start in</p>
+                <div id="countdown__timer">
+                    <div>
+                        <p id="days"></p>
+                        <span>Days</span>    
+                    </div>
+                    <p>:</p>
+                    <div>
+                        <p id="hours"></p>
+                        <span>Hours</span>    
+                    </div>
+                    <p>:</p>
+                    <div>
+                        <p id="minutes"></p>
+                        <span>Minutes</span>    
+                    </div>
+                    <p>:</p>
+                    <div>
+                        <p id="seconds"></p>
+                        <span>Seconds</span>    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="testimonials">
+        <div class="container">
+            <h2>Testimonials</h2>
+            <div class="testimonials__body grid">
+                <div class="testimonials__item" id="testimonial__1">
+                    <p class="testimonials__item__text">I always wanted to be a chef. Flavors and food were always of interest to me, but it was how those things brought friends and family together to celebrate not only the special occasions but everyday life. It has been a blessing that I have been able to pursue a career that creates a product that brings people together.</p>
+                    <div class="testimonials__item__person__card">
+                        <img src="img/t1.webp" alt="">
+                        <div class="testimonials__item__person">
+                            <p class="testimonials__item__person__name">Kate Williams</p>
+                            <p class="testimonials__item__person__course">Course: Italian</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonials__item" id="testimonial__2">
+                    <p class="testimonials__item__text">I always wanted to be a chef. Flavors and food were always of interest to me, but it was how those things brought friends and family together to celebrate not only the special occasions but everyday life. It has been a blessing that I have been able to pursue a career that creates a product that brings people together.</p>
+                    <div class="testimonials__item__person__card">
+                        <img src="img/t2.webp" alt="">
+                        <div class="testimonials__item__person">
+                            <p class="testimonials__item__person__name">Vanessa Raynolds</p>
+                            <p class="testimonials__item__person__course">Course: French</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="partners">
+        <div class="container">
+            <h2>Our Partners</h2>
+            <div class="partners__body">
+                <div class="partners__item">
+                    <div class="partners__item__image" id="p1"></div>
+                </div>
+                <div class="partners__item">
+                    <div class="partners__item__image" id="p2"></div>
+                </div>
+                <div class="partners__item">
+                    <div class="partners__item__image" id="p3"></div>
+                </div>
+                <div class="partners__item">
+                    <div class="partners__item__image" id="p4"></div>
+                </div>
+                <div class="partners__item">
+                    <div class="partners__item__image" id="p5"></div>
+                </div>
+                <div class="partners__item">
+                    <div class="partners__item__image" id="p6"></div>
+                </div>
+                <div class="partners__item">
+                    <div class="partners__item__image" id="p7"></div>
+                </div>
+                <div class="partners__item">
+                    <div class="partners__item__image" id="p8"></div>
+                </div>
+                <div class="partners__item">
+                    <div class="partners__item__image" id="p9"></div>
+                </div>
+                <div class="partners__item">
+                    <div class="partners__item__image" id="p10"></div>
+                </div>
+        </div>
+    </section>
+    <section id="contacts">
+        <div class="container">
+            <div class="contacts__body grid">
+                <div>
+                    <h2>Contacts</h2>
+                    <h3>Our office hours are 8:00 AM – 5:00 PM <br>Monday through Friday.</h3>
+                    <div class="contacts__item">
+                        <p class="address"><span>Address:</span> 940 Broadway, San Diego, CA 92101</p>
+                        <p class="phone"><span>Phone:</span> (619) 123-4567</p>
+                        <p class="email"><span>Email:</span> hello@company.com</p>
+                    </div>
+                    <div class="contacts__social">
+                        <a href="https://www.facebook.com/" class="social" id="fb" target="_blank">
+                            <i class="fa-brands fa-facebook"></i>
+                        </a>
+                        <a href="https://twitter.com/" class="social" id="tw" target="_blank">
+                            <i class="fa-brands fa-twitter"></i>
+                        </a>
+                        <a href="https://www.instagram.com/" class="social" id="inst" target="_blank">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                    </div>
+                    <button class="contacts__button" onclick="openForm()">Write Us</button>
+                </div>
+                <div class="map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3356.874490029281!2d-117.15809218481954!3d32.71596268099053!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80d954a755559491%3A0x86dd23d7d9295f9d!2zOTQwIEJyb2Fkd2F5LCBTYW4gRGllZ28sIENBIDkyMTAxLCDQodCo0JA!5e0!3m2!1sru!2suk!4v1668436887440!5m2!1sru!2suk" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer id="footer">
+        <div class="container">
+            <div class="footer__body grid">
+                <div class="footer__logo">
+                    <a href="#main"><img src="img/logo.webp" alt=""></a>
+                </div>
+                <div class="footer__menu">
+                    <ul class="footer__menu__list">
+                        <li>
+                            <a href="#courses" class="footer__menu__link">Courses</a>
+                        </li>
+                        <li>
+                            <a href="#chefs" class="footer__menu__link">Chefs</a>
+                        </li>
+                        <li>
+                            <a href="#testimonials" class="footer__menu__link">Testimonials</a>
+                        </li>
+                        <li>
+                            <a href="#contacts" class="footer__menu__link">Contacts</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer__contacts">
+                    <div class="footer__phone">
+                        <div class="footer__phone__description">
+                            <p class="footer___phone__title"><i class="fa-solid fa-phone"></i>(619) 123-4567</p>
+                            <p class="footer__phone__subtitle">Available 24/7</p>
+                        </div>
+                    </div>
+                    <div class="footer__location">
+                        <div class="footer__phone__description">
+                            <p class="footer___phone__title"><i class="fa-solid fa-location-dot"></i>Our Location</p>
+                            <p class="footer__phone__subtitle">940 Broadway, San Diego, CA 92101</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer__social">
+                    <a href="https://www.facebook.com/" class="social" id="fb" target="_blank">
+                        <i class="fa-brands fa-facebook"></i>
+                    </a>
+                    <a href="https://twitter.com/" class="social" id="tw" target="_blank">
+                        <i class="fa-brands fa-twitter"></i>
+                    </a>
+                    <a href="https://www.instagram.com/" class="social" id="inst" target="_blank">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
